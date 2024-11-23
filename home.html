@@ -10,10 +10,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="LoginPopup/loginpopupstyle.css">
   </head>
 
   <body>
+    <div class="main-body">
     <!-- navbar -->
+
     <div class="navbar">
       <img class="logo" src="./images/logo.jpg" alt="logo" />
       <div class="search">
@@ -105,5 +108,28 @@
      </div>
 
      <!-- Shop by categories -->
+    </div>
+
+    <div class="popup-window hidden">
+      <div class="popup-container">
+      <i id="close-icon" class = "fa-regular fa-circle-xmark"></i>
+      <h2>Welcome To</h2> <h1>MOMENTO</h1>
+      <p id="email-para">Email</p>
+      <input type="email" id="email" placeholder="Enter your email">
+      <p id="password-para">Password</p>
+      <input type="password" id="password" placeholder="Enter your password">
+      <div class="forgotpass">
+          <div id="remember-me">
+              <input type="checkbox" ><span id="remember-me">Remember me</span>
+          </div>
+          <p id="forgot-pass">Forgot password</p>
+          
+      </div>
+      <button id="signin">Sign in</button>
+      <button id="with-google"><img src="../images/googlelogo1.png"></img> Sign in with Google</button>
+      <p id="dont-have">Don't have an account? <span id="signup-span">Sign up for free!</span></p>
+    </div>
+  </div>
+  <script src="LoginPopup/loginpopupscript.js"></script>
   </body>
 </html>
