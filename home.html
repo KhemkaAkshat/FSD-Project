@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="home.css" />
-    
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  </head> 
+
+    <title>Momento-Watch store</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
   <body>
     <!-- navbar -->
     <div class="navbar">
-      <img class="logo" src="./images/logo.png" alt="logo" />
+      <img class="logo" src="./images/logo.jpg" alt="logo" />
       <div class="search">
         <input class="search-box" type="text" placeholder="Search" />
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
       </div>
       <div class="navbar-icons">
         <ul class="essentials">
@@ -27,5 +29,81 @@
         <button class="login">Login</button>
       </div>
     </div>
+    <!-- marquee -->
+    <div class="offer-banner">
+      <marquee class="scroll" behavior="scroll" direction="left">
+        <span>
+          Sign in and get 10% OFF on non-discounted watches over Rs. 999. T&C
+          Apply*
+        </span>
+
+        <span>Get Free Shipping on Your First Order. T&C Apply*</span>
+      </marquee>
+    </div>
+
+    <!-- Carousel -->
+    <div id="banner">
+      <div class="carousel">
+        <div class="slide">
+          <img src="./images/carousel-1.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/carousel-2.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/carousel-3.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/carousel-4.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/carousel-5.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Your choice section -->
+    <h4 class="your-choice-heading">What's Your Pick?</h4>
+    <div class="your-choice">
+      <div class="your-choice-options">
+        <img class="bestbuy" src="./images/bestbuy.png" alt="" />
+        <p>Best Buy</p>
+      </div>
+      <div class="your-choice-options">
+        <img class="bestbuy" src="./images/forhim.png" alt="" />
+        <p>For Him</p>
+      </div>
+      <div class="your-choice-options">
+        <img class="bestbuy" src="./images/forher.png" alt="" />
+        <p>For Her</p>
+      </div>
+      <div class="your-choice-options">
+        <img class="bestbuy" src="./images/couple.png" alt="" />
+        <p>For Both</p>
+      </div>
+      <div class="your-choice-options">
+        <img class="bestbuy" src="./images/bestseller.png" alt="" />
+        <p>Best Seller</p>
+      </div>
+    </div>
+
+    <!-- Shop by Brands -->
+     <div class="shop-brands">
+        <h4>Shop By Brands</h4>
+        <div class="brands">
+            <img src="./images/brands/titan.png" alt="">
+            <img src="./images/brands/fastrack.png" alt="">
+            <img src="./images/brands/Kenneth.png" alt="">
+            <img src="./images/brands/tommy-hilfiger.png" alt="">
+        </div>
+        <div class="brands">
+            <img src="./images/brands/coach.png" alt="">
+            <img src="./images/brands/police.png" alt="">
+            <img src="./images/brands/sonata.png" alt="">
+            <img src="./images/brands/nebula.png" alt="">
+        </div>
+     </div>
+
+     <!-- Shop by categories -->
   </body>
 </html>
