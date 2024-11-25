@@ -20,6 +20,7 @@ body {
 
 .logo {
   width: 15vw;
+  cursor: pointer;
 }
 
 .search {
@@ -65,20 +66,29 @@ body {
   font-weight: 500;
   color: #333;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: scale 0.2s ease-in-out, color 0.3s ease;
 }
-
+.essentials li:hover{
+  scale: 120%;
+}
 .login {
   color: white;
   background: #007bff;
   border: none;
-  padding: 10px 12px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  ;
+}
+.login:hover{
+  scale: 110%;
+  background-color: #0069d9;
+
 }
 .offer-banner {
   margin-bottom: 1px;

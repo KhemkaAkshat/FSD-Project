@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:arial;
+    /* overflow-x:hidden; */
+  }
+
+  .navbar {
+    background: white;
+    display: flex;
+    z-index:1;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    
+  }
+  
+  .logo {
+    width: 15vw;
+    cursor: pointer;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .search-icon {
+    font-size: 24px;
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .search-box {
+    width: 25vw;
+    padding: 2vh 1vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 3.5vw;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+  }
+  
+  .essentials {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  
+  .essentials li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out, color 0.3s ease;
+  }
+  .essentials li:hover{
+    scale: 120%;
+  }
+  .login {
+    color: white;
+    background: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+  }
+  .login:hover{
+    scale: 110%;
+    background-color: #0069d9;
+
+  }
+  .filter{
+    background: #eae9e7;
+    position:sticky;
+    top:0;
+    z-index: 100000;
+    width:100%;
+    /* padding:20px; */
+    height:5em;
+    display: flex;  
+    justify-content:space-around;
+    align-items: center;
+  }
+  .gender-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+  }
+  .Gender-word{
+    font-weight: 600 ;
+  }
+  .filter-button{
+    display: flex;
+    gap:10px;
+    font-size:28px;
+  }
+  .filter-sort{
+    display: flex;
+    gap:10px;
+    font-size:28px;
+    justify-content: space-around;
+  }
+  .filter-btn, .sort,.Gender{
+    border:1px solid lightgray;
+    padding:15px 25px;
+    border-radius: 8px;
+    background: white;
+    transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+  }
+  .Gender:hover,.sort:hover, .filter-btn:hover {
+    border: 1px solid #65ff8b;
+    background: #ebf0f2;
+    scale: 110%;
+  }
+  
+  
