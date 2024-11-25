@@ -4,8 +4,8 @@
   font-family: Arial, sans-serif;
   /* overflow-x:hidden; */
 }
-body{
-  overflow-x:hidden;
+body {
+  overflow-x: hidden;
 }
 .navbar {
   background: white;
@@ -15,6 +15,7 @@ body{
   height: 100px;
   padding-left: 5vw;
   padding-right: 5vw;
+  
 }
 
 .logo {
@@ -110,9 +111,9 @@ body{
   margin: 0px -2px;
 }
 .control-button {
-  width:100px;
-  height:100px;
-  position:absolute;
+  width: 100px;
+  height: 100px;
+  position: absolute;
   z-index: 10;
   padding: 10px 20px;
   margin: 10px;
@@ -121,9 +122,9 @@ body{
   color: #000;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s ease-in-out ;
+  transition: opacity 0.2s ease-in-out;
 }
-.control-button:hover{
+.control-button:hover {
   opacity: 1;
 }
 
@@ -208,13 +209,13 @@ body{
 }
 .brands {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
 }
-.brands img{
-  width: 25%;  
+.brands img {
+  width: 25%;
 }
 .carousel-container {
   position: relative;
@@ -228,11 +229,10 @@ body{
   transition: transform 0.5s ease-in-out;
 }
 
-
 .control-btn {
-  width:50px;
-  height:50px;
-  position:absolute;
+  width: 50px;
+  height: 50px;
+  position: absolute;
   z-index: 10;
   padding: 10px 20px;
   margin: 10px;
@@ -241,22 +241,22 @@ body{
   color: #000;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s ease-in-out ;
+  transition: opacity 0.2s ease-in-out;
 }
-.control-btn:hover{
+.control-btn:hover {
   opacity: 1;
 }
-#prevBtn{
+#prevBtn {
   font-size: 30px;
   border-radius: 50px;
-  left:10px;
-  bottom:34%;
+  left: 10px;
+  bottom: 34%;
 }
-#nextBtn{
+#nextBtn {
   font-size: 30px;
   border-radius: 50px;
-  right:20px;
-  bottom:34%;
+  right: 20px;
+  bottom: 34%;
 }
 
 .controls {
@@ -267,7 +267,7 @@ body{
 
 .slide-2 img {
   border-radius: 2em;
-  width: 50%;
+  width: 100%;
   height: 20rem;
   object-fit: cover;
 }
@@ -276,14 +276,50 @@ body{
   animation: carousel 10s infinite linear;
 }
 .slide-2 {
+  position: relative;
   display: inline-flex;
   justify-content: space-between;
-  gap:15px;
+  gap: 15px;
   align-items: center;
   width: 20%;
-  /* margin: 0px -2px; */
+}
+.slide-2 div {
+  color: white;
+  position: absolute;
+  z-index: 100;
+  bottom: 0%;
+  background: #dbd1d1;
+  opacity: 0.7;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  padding: 20px 0;
+  width: 32.7%;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
+.sport {
+  font-weight: 600;
+}
+.casual {
+  font-weight: 600;
+  left: 33.65%;
+}
+.luxe {
+  font-weight: 600;
+  left: 67.3%;
+}
+.field{
+  font-weight: 600;
+  left:100%;
+}
+.smart{
+  left:200%;
 }
 
+
+.slide-2 div:hover{
+  opacity: 1;
+}
 @keyframes carousel-2 {
   0%,
   15% {
