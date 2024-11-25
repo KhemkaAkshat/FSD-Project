@@ -2,14 +2,17 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  /* overflow-x:hidden; */
 }
-
+body{
+  overflow-x:hidden;
+}
 .navbar {
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 100px;
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -44,17 +47,16 @@
 
 .navbar-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 3vw;
 }
 
 .essentials {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 3vw;
+  justify-content: space-between;
+  gap: 3em;
 }
 
 .essentials li {
@@ -69,7 +71,7 @@
   color: white;
   background: #007bff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -78,7 +80,7 @@
   justify-content: center;
 }
 .offer-banner {
-    margin-bottom:1px;
+  margin-bottom: 1px;
   background-color: #007bff;
   color: white;
   font-size: 18px;
@@ -90,8 +92,8 @@
   top: 0;
   z-index: 1000;
 }
-.scroll span{
-    margin-right:50em;
+.scroll span {
+  margin-right: 50em;
 }
 
 .slide img {
@@ -106,6 +108,23 @@
   display: inline-block;
   width: 20%;
   margin: 0px -2px;
+}
+.control-button {
+  width:100px;
+  height:100px;
+  position:absolute;
+  z-index: 10;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d1d9e2;
+  opacity: 0.5;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out ;
+}
+.control-button:hover{
+  opacity: 1;
 }
 
 @keyframes carousel {
@@ -134,13 +153,14 @@
   font-size: 50px;
   text-align: center;
   font-weight: 500;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 .your-choice {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 2em;
 }
 .your-choice-options {
   width: 20em;
@@ -152,9 +172,9 @@
   width: 15em;
   height: 15em;
   border-radius: 50%;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .your-choice-options p {
@@ -176,20 +196,133 @@
 .your-choice-options img:hover + p {
   font-weight: 600;
 }
-.shop-brands{
-  background: #FAF9F6;
-  padding:50px;
+.shop-brands {
+  background: #eae9e7;
+  padding: 50px;
 }
-.shop-brands h4{
+.shop-brands h4 {
   text-align: center;
-  font-size:50px;
-  font-weight:500;
+  font-size: 50px;
+  font-weight: 500;
   margin-bottom: 20px;
 }
-.brands{
+.brands {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:15px;
+  gap: 15px;
   margin-bottom: 15px;
+}
+.brands img{
+  width: 25%;  
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-2 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.control-btn {
+  width:50px;
+  height:50px;
+  position:absolute;
+  z-index: 10;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d1d9e2;
+  opacity: 0.5;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out ;
+}
+.control-btn:hover{
+  opacity: 1;
+}
+#prevBtn{
+  font-size: 30px;
+  border-radius: 50px;
+  left:10px;
+  bottom:34%;
+}
+#nextBtn{
+  font-size: 30px;
+  border-radius: 50px;
+  right:20px;
+  bottom:34%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slide-2 img {
+  border-radius: 2em;
+  width: 50%;
+  height: 20rem;
+  object-fit: cover;
+}
+.carousel-2 {
+  width: 500%;
+  animation: carousel 10s infinite linear;
+}
+.slide-2 {
+  display: inline-flex;
+  justify-content: space-between;
+  gap:15px;
+  align-items: center;
+  width: 20%;
+  /* margin: 0px -2px; */
+}
+
+@keyframes carousel-2 {
+  0%,
+  15% {
+    transform: translateX(0%);
+  }
+  20%,
+  35% {
+    transform: translateX(-20%);
+  }
+  40%,
+  55% {
+    transform: translateX(-40%);
+  }
+  60%,
+  75% {
+    transform: translateX(-60%);
+  }
+  80%,
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+.dial-type {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.mechanical-dail {
+  width: 40%;
+}
+.other-dial-1 {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.other-dial-2 {
+  display: flex;
+  gap: 20px;
 }
