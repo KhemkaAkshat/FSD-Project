@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //functions---
     function openProductPage(){
-        console.log('reaching')
+        window.location.href = "product.html"
     }
 })
