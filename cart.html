@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <h1>Welcome To YOUR CART</h1>
+    <header>
+        <div class="container">
+            <img class="logo-img" src="./images/logo.jpg" alt="">
+            <div class="signin">
+                <p class="signed-as">Signed as</p>
+                <h5>ranveersingh04@gmail.com</h5>
+            </div>
+        </div>
+    </header>
 
+    <hr>
+    <h3>My Bag(1 item)</h3>
 
-
-
-
-
-
-
+    <div class="maincontainer">
+        <div class="main-cart">
+            <ul id="cart-list"></ul>
+        </div>
+        <div class="total-price">
+            <div class="coupons"></div>
+            <div class="price-summary"></div>
+        </div>
+    </div>
     <script type="module" src="cart.js"></script>
 </body>
 </html>

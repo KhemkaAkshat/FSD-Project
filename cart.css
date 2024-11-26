@@ -1,4 +1,32 @@
-body{
-    background-color: black;
-    color: #fff;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-img{
+    height: 8vh;
+    cursor: pointer;
+}
+.signed-as{
+    text-align: center;
+    font-family: Arial,  sans-serif;
+    margin-bottom: 4px;
+}
+.signin p{
+    color: rgb(103, 101, 101);
+}
+.signin h5{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: scale 0.2s ease-out;
+}
+.signin h5:hover{
+    scale: 105%
+}
+hr{
+    opacity: 0.4;
 }
