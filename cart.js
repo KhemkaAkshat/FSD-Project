@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     renderCartElements();
+    updatePrices();
 
 
     // rendering cart element
@@ -29,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
             `
             cartList.appendChild(li)
         });
+
+        const closeBtn = document.querySelectorAll('#close-icon')
+        for (const closeBtnEach of closeBtn) {
+        closeBtnEach.addEventListener('click', () => {
+            const productId = parseInt(closeBtnEach.getAttribute('data-id'))
+            cartItems = cartItems.filter((p) => p.id !== productId);
+            saveToLocal();
+            renderCartElements();
+            updatePrices()
+        })
+        
+    }
+    }
+
+    function saveToLocal(){
+            localStorage.setItem('cart', JSON.stringify(cartItems))
     }
     
 
@@ -54,9 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return subtotal;
     }
 
-    const totalPrice = calculatingTotal();
-    const discount = calculatingDiscount();
-    const subtotal = calculatingSubtotal();
+    function updatePrices(){
+        const totalPrice = calculatingTotal();
+        const discount = calculatingDiscount();
+        const subtotal = calculatingSubtotal();
+    
+
+    
 
     // rendering price section of the cart page
 
@@ -82,16 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class = "subtotal-price">₹ ${subtotal}</p>
                     </div>
                     <button class="checkout-btn">PLACE ORDER</button>
-    `
+    `}
     
-    const closeBtn = document.querySelectorAll('#close-icon')
-    for (const closeBtnEach of closeBtn) {
-        closeBtnEach.addEventListener('click', () => {
-            const productId = parseInt(closeBtnEach.getAttribute('data-id'))
-            cartItems = cartItems.filter((p) => p.id !== productId)
-            renderCartElements();
-            console.log("reaching")
-        })
-        
-    }
+    
 })
