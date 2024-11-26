@@ -1,32 +1,179 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: arial;
 }
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.logo-img{
+.logo-img {
     height: 8vh;
     cursor: pointer;
 }
-.signed-as{
+.signed-as {
     text-align: center;
-    font-family: Arial,  sans-serif;
+    font-family: Arial, sans-serif;
     margin-bottom: 4px;
 }
-.signin p{
+.signin p {
     color: rgb(103, 101, 101);
 }
-.signin h5{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.signin h5 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     transition: scale 0.2s ease-out;
 }
-.signin h5:hover{
-    scale: 105%
+.signin h5:hover {
+    scale: 105%;
 }
-hr{
+hr {
     opacity: 0.4;
+}
+.My-bag {
+    text-align: start;
+    padding-left: 10%;
+    margin: 10px;
+}
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+.main-cart {
+    width: 60%;
+    padding: 10px;
+}
+.coupons {
+    width: 120%;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.coupons-head {
+    font-size: 22px;
+}
+.coupon-content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+.coupon-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-gift {
+    font-size: 20px;
+    color: goldenrod;
+}
+.coupon-text {
+    font-size: 12px;
+    color: #888888;
+}
+.view-btn {
+    color: #007bff;
+    cursor: pointer;
+}
+.total-price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.items-details {
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    gap: 10px;
+}
+.cartItem-Img {
+    width: 20%;
+    border-radius: 5px;
+}
+.details {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.detail-name {
+    font-size: 17px;
+}
+.detail-type {
+    font-size: 12px;
+    color: #888888;
+}
+.detail-deliveryBy {
+    font-weight: 12px;
+}
+.detail-date {
+    font-weight: 550;
+    color: #5b5858;
+}
+.priceDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    gap: 7em;
+}
+#close-icon {
+    font-size: 20px;
+    opacity: 0.4;
+}
+.price {
+    font-size: 20px;
+}
+#price-summary {
+    border-radius: 10px;
+    width: 120%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.priceSummaryHeading {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.total-mrp,
+.discount,
+.delivery-fee,
+.subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.subtotal {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.checkout-btn {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    background: #ffd232;
+    color: black;
+    font-weight: 550;
+    font: size 16px;
+    cursor: pointer;
 }

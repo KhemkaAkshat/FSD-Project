@@ -1,8 +1,10 @@
 
+
 let cartItems = JSON.parse(localStorage.getItem('cart')) || []
 document.addEventListener('DOMContentLoaded', () => {
     const cartList = document.getElementById('cart-list')
     const priceSummary = document.getElementById('price-summary')
+    const mybag = document.querySelector('.My-bag')
     
 
     renderCartElements();
@@ -25,11 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="priceDetails">
                             <i id="close-icon" data-id ="${item.id}" class = "fa-regular fa-circle-xmark"></i>
-                            <p class="price">₹ ${item.price}</p>
+                            <p class="price">₹ ${item.price.toFixed(2)}</p>
                         </div>
             `
             cartList.appendChild(li)
         });
+
+        mybag.textContent = `My Bag(${cartItems.length} item)`
 
         const closeBtn = document.querySelectorAll('#close-icon')
         for (const closeBtnEach of closeBtn) {
@@ -81,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // rendering price section of the cart page
 
-    priceSummary.innerHTML = `
+  priceSummary.innerHTML = `
                     <div class="priceSummaryHeading">
                         <p >Price Summary</p>
                     </div>
                     <div class="total-mrp">
                         <p class = "total-mrp-text">Total MRP (Incl. of taxes)</p>
-                        <p class = "total-mrp-price">₹ ${totalPrice}</p>
+                        <p class = "total-mrp-price">₹ ${totalPrice.toFixed(2)}</p>
                     </div>
                     <div class="discount">
                         <p class = "discount-text">Bag Discount</p>
@@ -100,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <hr>
                     <div class="subtotal">
                         <p class = "subtotal-text">Subtotal</p>
-                        <p class = "subtotal-price">₹ ${subtotal}</p>
+                        <p class = "subtotal-price">₹ ${subtotal.toFixed(2)}</p>
                     </div>
                     <button class="checkout-btn">PLACE ORDER</button>
     `}
