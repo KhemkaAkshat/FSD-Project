@@ -1,7 +1,7 @@
 import { productData } from "./ProductData/data.js";
 
 
-const cartItems = JSON.parse(localStorage.getItem('cart'))   || []
+export const cartItems = JSON.parse(localStorage.getItem('cart'))   || []
 document.addEventListener('DOMContentLoaded', () => {
         
     const productList = document.getElementById('productList')

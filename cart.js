@@ -1,32 +1,34 @@
+import { cartItems } from "./productScript.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cartList = document.getElementById('cart-list')
-    const priceSummary = document.getElementById('price-summary')
-    
+document.addEventListener("DOMContentLoaded", () => {
+  const cartList = document.getElementById("cart-list");
+  const priceSummary = document.getElementById("price-summary");
 
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || []
-    // rendering cart element
-    
-    cartItems.forEach((item) => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-                    <div class= "imgDiv">
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  // rendering cart element
+
+  cartItems.forEach((item) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <div class="items-details">
+                
                         <img class = "cartItem-Img" src = "${item.src}">
-                    </div>
+                    
                     <div class= "details">
                         <p class="detail-name">${item.name}</p>
                         <p class="detail-type">${item.type}</p>
                         <p class="detail-deliveryBy">Delivery by <span class="detail-date">30 Nov 2024</span></p>
                     </div>
+                    </div>
                     <div class="priceDetails">
                         <i id="close-icon" class = "fa-regular fa-circle-xmark"></i>
-                        <p class="price">₹ ${item.price}</p>
+                        <p class="price">₹${item.price}</p>
                     </div>
-        `
-        cartList.appendChild(li)
-    });
+        `;
+    cartList.appendChild(li);
+  });
 
-    priceSummary.innerHTML = `
+  priceSummary.innerHTML = `
                     <div class="priceSummaryHeading">
                         <p >Price Summary</p>
                     </div>
@@ -48,7 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class = "subtotal-price">₹ SUBTOTAL</p>
                     </div>
                     <button class="checkout-btn">PLACE ORDER</button>
-    `
-    
-})
-import { cartItems } from "./productScript.js";
+    `;
+});
