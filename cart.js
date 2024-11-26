@@ -51,3 +51,4 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     
 })
+import { cartItems } from "./productScript.js";

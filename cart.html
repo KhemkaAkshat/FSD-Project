@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Cart</title>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="cart.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <img class="logo-img" src="./images/logo.jpg" alt="">
-            <div class="signin">
-                <p class="signed-as">Signed as</p>
-                <h5>ranveersingh04@gmail.com</h5>
-            </div>
+      <div class="container">
+        <img class="logo-img" src="./images/logo.jpg" alt="" />
+        <div class="signin">
+          <p class="signed-as">Signed as</p>
+          <h5>ranveersingh04@gmail.com</h5>
         </div>
+      </div>
     </header>
 
-    <hr>
-    <h3>My Bag(1 item)</h3>
+    <hr />
+    <h3 class="My-bag">My Bag(1 item)</h3>
 
     <div class="maincontainer">
-        <div class="main-cart">
-            <ul id="cart-list"></ul>
+      <div class="main-cart">
+        <ul id="cart-list">
+          HEllo
+        </ul>
+      </div>
+      <div class="total-price">
+        <div class="coupons">
+          <p class="coupons-head">Coupons & Offers</p>
+          <div class="coupon-box">
+            <div class="coupon-content">
+              <i class="fa-solid fa-gift"></i>
+
+              <div class="coupon-texts">
+                <p>Apply Coupons / Gift Cards</p>
+                <p class="coupon-text">Crazy Deals and other amazing offers</p>
+              </div>
+            </div>
+            <div class="">
+              <p class="view-btn">View</p>
+            </div>
+          </div>
         </div>
         <div class="total-price">
             <div class="coupons"></div>
@@ -34,5 +53,5 @@
         </div>
     </div>
     <script type="module" src="cart.js"></script>
-</body>
+  </body>
 </html>

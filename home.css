@@ -15,7 +15,6 @@ body {
   height: 100px;
   padding-left: 5vw;
   padding-right: 5vw;
-  
 }
 
 .logo {
@@ -68,7 +67,7 @@ body {
   cursor: pointer;
   transition: scale 0.2s ease-in-out, color 0.3s ease;
 }
-.essentials li:hover{
+.essentials li:hover {
   scale: 120%;
 }
 .login {
@@ -83,12 +82,10 @@ body {
   align-items: center;
   justify-content: center;
   transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  ;
 }
-.login:hover{
+.login:hover {
   scale: 110%;
   background-color: #0069d9;
-
 }
 .offer-banner {
   margin-bottom: 1px;
@@ -318,16 +315,15 @@ body {
   font-weight: 600;
   left: 67.3%;
 }
-.field{
+.field {
   font-weight: 600;
-  left:100%;
+  left: 100%;
 }
-.smart{
-  left:200%;
+.smart {
+  left: 200%;
 }
 
-
-.slide-2 div:hover{
+.slide-2 div:hover {
   opacity: 1;
 }
 .dial-type {
@@ -349,5 +345,3 @@ body {
   display: flex;
   gap: 20px;
 }
-
-
