@@ -5,6 +5,7 @@ const cartItems = JSON.parse(localStorage.getItem('cart'))   || []
 document.addEventListener('DOMContentLoaded', () => {
         
     const productList = document.getElementById('productList')
+    const goOnCartBtn = document.getElementById('goOnCartPage')
 
 
     // rendering of products
@@ -38,5 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveToLocal(){
         localStorage.setItem('cart', JSON.stringify(cartItems))
     }
+
+    goOnCartBtn.addEventListener('click', () => {
+        window.location.href = "cart.html"
+    })
 })
-export {cartItems}
+
