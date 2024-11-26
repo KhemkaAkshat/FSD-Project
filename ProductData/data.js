@@ -142,3 +142,6 @@ const productData = [
         price: 23755.0,
     },
 ];
+
+export {productData}
+
