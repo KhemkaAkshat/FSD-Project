@@ -1,19 +1,24 @@
-let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-document.addEventListener("DOMContentLoaded", () => {
-  const cartList = document.getElementById("cart-list");
-  const priceSummary = document.getElementById("price-summary");
-  const mybag = document.querySelector(".My-bag");
+
+
+let cartItems = JSON.parse(localStorage.getItem('cart')) || []
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('.logo-img')
+    const cartList = document.getElementById('cart-list')
+    const priceSummary = document.getElementById('price-summary')
+    const mybag = document.querySelector('.My-bag')
+    // const placeOrderBtn = document.querySelector('')
+    
 
   renderCartElements();
   updatePrices();
 
-  // rendering cart element
-  function renderCartElements() {
-    cartList.innerHTML = "";
-    cartItems.forEach((item) => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-      <!--added items-details div -->
+    // rendering cart element
+    function renderCartElements(){
+        cartList.innerHTML = '';
+        cartItems.forEach((item) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                        <!--added items-details div -->
              <div class="items-details">
             <!--removed imgDiv div-->
             <img class="cartItem-Img" src="${item.src}" alt="Product Image">
@@ -30,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }" class="fa-regular fa-circle-xmark"></i>
         <p class="price">₹ ${item.price.toFixed(2)}</p>
     </div>
-            `;
-      cartList.appendChild(li);
-    });
+            `
+            cartList.appendChild(li)
+        });
 
     mybag.textContent = `My Bag(${cartItems.length} item)`;
 
@@ -93,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="discount">
                         <p class = "discount-text">Bag Discount</p>
-                        <p class = "discount-price">- ₹ ${discount.toFixed(2)}</p>
+                        <p class = "discount-price">₹ - ${discount.toFixed(2)}</p>
                     </div>
                     <div class="delivery-fee">
                         <p class = "delivery-fee-text">Delivery Fee</p>
@@ -105,6 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class = "subtotal-price">₹ ${subtotal.toFixed(2)}</p>
                     </div>
                     <button class="checkout-btn">PLACE ORDER</button>
-    `;
-  }
-});
+    `}
+
+    logo.addEventListener('click', () => {
+        window.location.href = "home.html"
+    })
+
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    checkoutBtn.addEventListener('click', () => {
+        cartItems = []
+        saveToLocal();
+        renderCartElements();
+        updatePrices();
+        alert("Order has been places SUCCESSFULLYYY...")
+    })
+})
