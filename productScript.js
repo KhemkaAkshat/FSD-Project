@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const goOnCartBtn = document.getElementById('goOnCartPage')
     const popup = document.getElementById("popup");
     const cartItemsNo = document.querySelector('.cartItemsNo')
+    const logo = document.querySelector('.logo')
 
     renderingProducts()
     cartItemsNoCheck()
@@ -64,13 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           popup.classList.remove("visible");
           popup.classList.add("hidden");
-        }, 2000);
+        }, 1000);
     }
 
     
     for(const eachCartBtn of cartBtn){
         eachCartBtn.addEventListener('click', showPopup)
     }
+
+    logo.addEventListener('click', () => {
+        window.location.href = "home.html"
+    })
 
     
 })

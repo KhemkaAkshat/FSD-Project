@@ -123,8 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePrices();
         alert("Order has been places SUCCESSFULLYYY...")
     })
-
-    
-    
-    
 })
