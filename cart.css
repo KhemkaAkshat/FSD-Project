@@ -162,6 +162,9 @@ hr {
     gap: 10px;
     margin-bottom: 20px;
 }
+.discount-price, .delivery-fee-price{
+    color: #008c2d
+}
 .subtotal {
     font-size: 18px;
     margin-top: 20px;

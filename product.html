@@ -19,7 +19,7 @@
     <div class="navbar-icons">
       <ul class="essentials">
         <li><i class="fa-regular fa-heart essentials-icon essentials-icon"></i> <p><p>Wishlist</p></p></li>
-        <li id="goOnCartPage"><i class="fa-solid fa-cart-shopping essentials-icon essentials-icon"></i> <p><p>Cart</p></p></li>
+        <li id="goOnCartPage"><i id="cartIcon" class ="fa-solid fa-cart-shopping essentials-icon essentials-icon"><div class="cartItemsNo ">15</div></i><p><p>Cart</p></p></li>
         <li><i class="fa-solid fa-receipt essentials-icon" essentials-icon""></i> <p><p>Orders</p></p></li>
       </ul>
       <button class="login">Login</button>
@@ -53,6 +53,7 @@
   <div class="more-items-btn">
     <button>Show More Items...</button>
   </div>
+  <div id="popup" class="hidden"><i class="fa-solid fa-check"></i>  Product added to cart successfully!</div>
   <iframe src="footer.html" width="100%" height="900em" frameborder="0"></iframe>
   </div>
   <script type ="module"src="productScript.js"></script>
