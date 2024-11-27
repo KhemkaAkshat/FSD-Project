@@ -101,27 +101,33 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class = "discount-price">₹ - ${discount.toFixed(2)}</p>
                     </div>
                     <div class="delivery-fee">
-                        <p class = "delivery-fee-text">Delivery Fee</p>
-                        <p class = "delivery-fee-price"> FREE</p>
+                    <p class = "delivery-fee-text">Delivery Fee</p>
+                    <p class = "delivery-fee-price"> FREE</p>
                     </div>
                     <hr>
                     <div class="subtotal">
-                        <p class = "subtotal-text">Subtotal</p>
-                        <p class = "subtotal-price">₹ ${subtotal.toFixed(2)}</p>
+                    <p class = "subtotal-text">Subtotal</p>
+                    <p class = "subtotal-price">₹ ${subtotal.toFixed(2)}</p>
                     </div>
                     <button class="checkout-btn">PLACE ORDER</button>
-    `}
-
+                    `
+                    const checkoutBtn = document.querySelector('.checkout-btn');
+                    checkoutBtn.addEventListener('click',checkout)
+                }
+                
     logo.addEventListener('click', () => {
         window.location.href = "home.html"
     })
 
-    const checkoutBtn = document.querySelector('.checkout-btn');
-    checkoutBtn.addEventListener('click', () => {
+    function checkout(){
+        if(cartItems.length > 0){
         cartItems = []
         saveToLocal();
         renderCartElements();
         updatePrices();
-        alert("Order has been places SUCCESSFULLYYY...")
-    })
+        alert("Order has been placed SUCCESSFULLYYY...")
+        }else{
+            alert('Your cart is Empty')
+        }
+    }
 })
