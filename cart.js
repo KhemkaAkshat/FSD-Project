@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="priceDetails">
         <i id="close-icon" data-id="${
           item.id
-        }" class="fa-regular fa-circle-xmark"></i>
+        }" class="fa-solid fa-xmark"></i>
         <p class="price">₹ ${item.price.toFixed(2)}</p>
     </div>
             `
