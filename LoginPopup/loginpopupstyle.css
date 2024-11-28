@@ -38,6 +38,10 @@
 }
 
 /* Heading */
+.welcome-text {
+    font-weight: lighter;
+}
+
 .container h1 {
     font-size: 24px;
     color: #111111;

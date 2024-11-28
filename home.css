@@ -44,6 +44,7 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   padding-left: 3.5vw;
+  font-size: 14px;
 }
 
 .navbar-icons {
@@ -70,7 +71,7 @@ body {
   transition: scale 0.2s ease-in-out, color 0.3s ease;
 }
 .essentials li:hover {
-  scale: 120%;
+  scale: 110%;
 }
 .login {
   color: white;
@@ -93,9 +94,9 @@ body {
   margin-bottom: 1px;
   background-color: #007bff;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 6px 0;
   text-align: center;
   /* border-bottom: 2px solid #cc0000; */
   position: sticky;
@@ -191,7 +192,7 @@ body {
   cursor: pointer;
   font-size: 25px;
   color: #555555;
-  transition: font-weight 0.3s ease-in-out; /* Smooth transition for font weight */
+  transition: font-weight 0.1s ease-in-out; /* Smooth transition for font weight */
 }
 
 .your-choice-options:hover p {
@@ -204,7 +205,7 @@ body {
 }
 
 .your-choice-options img:hover + p {
-  font-weight: 600;
+  font-weight: 500;
 }
 .shop-brands {
   background: #eae9e7;
@@ -252,10 +253,16 @@ body {
   transform: translate(-50%, -50%);
   margin-top: 10px;
   font-size: 20px;
-  color: #333;
+  color: #616060;
   font-weight: bold;
   text-align: center;
 }
+
+.shop-category p:hover {
+  cursor: pointer;
+  color: #333;
+}
+
 
 .shop-category div {
   position: relative;
